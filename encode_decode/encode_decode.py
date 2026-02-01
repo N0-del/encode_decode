@@ -30,7 +30,7 @@ GYaJSrFnGrXKz3VtySS+LIa26lRYbJCrM+dknpV2e/yCkTLIfrDwPrUJjgRpkolGVOG5dwRT4CKUfBwK
 uIv3VTf5rJeGmEHN1hhNfBECo3s4OYABUMt1QdruF5AABxATuCwAAVfdZhrHEZ/sCAAAAAARZWg==
 '''
 
-def ndcc_B_encode(source: str, key: str, math_formula: str) -> str:
+def cc_B_encode(source: str, key: str, math_formula: str) -> str:
     """encode une chaîne de caractères grâce à une clé et une fonction mathématique"""
     assert "x" in math_formula, "La variable x doit être définie dans la formule mathématique"
     f = eval(f"lambda x: {math_formula}")
@@ -47,7 +47,7 @@ def ndcc_B_encode(source: str, key: str, math_formula: str) -> str:
     return to_ascii(encoded)
 
 
-def ndcc_B_decode(source: str, key: str, reversed_math_formula: str) -> str:
+def cc_B_decode(source: str, key: str, reversed_math_formula: str) -> str:
     """décode une chaîne de caractères grâce à une clé et une fonction mathématique"""
     source = to_utf_8(source)
     assert "x" in reversed_math_formula, "La variable x doit être définie dans la formule inversée"
